@@ -4,5 +4,10 @@ import cn.nukkit.plugin.PluginBase;
 public class Main extends PluginBase {
 
     Inventory inv;
+<<<<<<< Updated upstream
     coś
+=======
+
+
+>>>>>>> Stashed changes
 }
