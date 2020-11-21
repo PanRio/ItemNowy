@@ -9,16 +9,20 @@ import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemID;
 import cn.nukkit.plugin.PluginBase;
 
-public class Main extends PluginBase{
+public class Main extends PluginBase implements Api{
 
+        static Main instance;
 
     public Item npcWand = new Item(ItemID.STICK);
+
+    public Main(){}
+
 
     @Override
     public void onEnable() {
 
 
-
+        instance = this;
         getServer().getPluginManager().registerEvents(new PlayerListener(),this);
 
 
@@ -67,5 +71,5 @@ public class Main extends PluginBase{
 
 
 
-    int test;
+    public Main getPlugin(){return this;}
 }
